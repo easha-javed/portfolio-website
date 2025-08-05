@@ -440,46 +440,7 @@ export default function Portfolio() {
       </Card>
     </div>
 
-    {/* Buttons Row */}
-    <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
-      {/* Email Button */}
-      <Button
-        size="lg"
-        className="bg-amber-600 hover:bg-amber-700 text-black font-semibold px-6 py-3 w-fit"
-        asChild
-      >
-        <a href="mailto:eashajaved896@gmail.com" className="flex items-center">
-          <Mail className="h-4 w-4 mr-2" />
-          eashajaved896@gmail.com
-        </a>
-      </Button>
-
-      {/* LinkedIn Button */}
-      <Button
-        variant="outline"
-        size="lg"
-        className="border-amber-600 text-amber-400 hover:bg-amber-600 hover:text-black bg-transparent"
-        asChild
-      >
-        <a href="https://www.linkedin.com/in/easha-javed-a27055263" target="_blank" rel="noopener noreferrer">
-          <Linkedin className="h-4 w-4 mr-2" />
-          Connect on LinkedIn
-        </a>
-      </Button>
-
-      {/* GitHub Button */}
-      <Button
-        variant="outline"
-        size="lg"
-        className="border-amber-600 text-amber-400 hover:bg-amber-600 hover:text-black bg-transparent"
-        asChild
-      >
-        <a href="https://github.com/easha-javed" target="_blank" rel="noopener noreferrer">
-          <Github className="h-4 w-4 mr-2" />
-          Connect on GitHub
-        </a>
-      </Button>
-    </div>
+    
   </div>
 </section>
 
