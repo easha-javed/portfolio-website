@@ -83,7 +83,7 @@ export default function Portfolio() {
           </a>
         </Button>
         <Button variant="ghost" size="icon" className="text-gray-400 hover:text-amber-400" asChild>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/easha-javed" target="_blank" rel="noopener noreferrer">
             <Github className="h-5 w-5" />
           </a>
         </Button>
@@ -386,62 +386,105 @@ export default function Portfolio() {
       </section>
 
       {/* Connect Section */}
-      <section id="connect" className="py-20 px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-16 text-amber-400">Connect With Me</h2>
-          <p className="text-xl text-gray-300 mb-12">Let's collaborate and create something amazing together!</p>
+<section id="connect" className="py-20 px-6">
+  <div className="container mx-auto max-w-6xl text-center">
+    <h2 className="text-4xl lg:text-5xl font-bold mb-16 text-amber-400">Connect With Me</h2>
+    <p className="text-xl text-gray-300 mb-12">Let's collaborate and create something amazing together!</p>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="bg-gray-900/50 border-amber-900/30 hover:border-amber-600/50 transition-colors">
-              <CardContent className="p-8 text-center">
-                <Phone className="h-12 w-12 text-amber-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-amber-400 mb-2">Phone</h3>
-                <p className="text-gray-300">03254217680</p>
-              </CardContent>
-            </Card>
+    {/* Grid of Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 justify-center">
+      {/* Phone */}
+      <Card className="w-[270px] h-[250px] bg-gray-900/50 border border-amber-900/30 hover:border-amber-600/50 transition-colors">
+        <CardContent className="p-8 text-center">
+          <Phone className="h-12 w-12 text-amber-400 mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-amber-400 mb-2">Phone</h3>
+          <p className="text-gray-300">03254217680</p>
+        </CardContent>
+      </Card>
 
-            <Card className="bg-gray-900/50 border-amber-900/30 hover:border-amber-600/50 transition-colors">
-              <CardContent className="p-8 text-center">
-                <Mail className="h-12 w-12 text-amber-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-amber-400 mb-2">Email</h3>
-                <p className="text-gray-300">eashajaved896@gmail.com</p>
-              </CardContent>
-            </Card>
+      {/* Email */}
+      <Card className="w-[270px] h-[250px] bg-gray-900/50 border border-amber-900/30 hover:border-amber-600/50 transition-colors">
+        <CardContent className="p-8 text-center">
+          <Mail className="h-12 w-12 text-amber-400 mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-amber-400 mb-2">Email</h3>
+          <p className="text-gray-300 text-sm sm:text-base whitespace-nowrap">
+            eashajaved896@gmail.com
+          </p>
+        </CardContent>
+      </Card>
 
-            <Card className="bg-gray-900/50 border-amber-900/30 hover:border-amber-600/50 transition-colors">
-              <CardContent className="p-8 text-center">
-                <Linkedin className="h-12 w-12 text-amber-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-amber-400 mb-2">LinkedIn</h3>
-                <Button variant="link" className="text-gray-300 hover:text-amber-400 p-0" asChild>
-                  <a href="https://www.linkedin.com/in/easha-javed-a27055263" target="_blank" rel="noopener noreferrer">
-                    View Profile
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
+      {/* LinkedIn */}
+      <Card className="w-[270px] h-[250px] bg-gray-900/50 border border-amber-900/30 hover:border-amber-600/50 transition-colors">
+        <CardContent className="p-8 text-center">
+          <Linkedin className="h-12 w-12 text-amber-400 mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-amber-400 mb-2">LinkedIn</h3>
+          <Button variant="link" className="text-gray-300 hover:text-amber-400 p-0" asChild>
+            <a href="https://www.linkedin.com/in/easha-javed-a27055263" target="_blank" rel="noopener noreferrer">
+              View Profile
+            </a>
+          </Button>
+        </CardContent>
+      </Card>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-black font-semibold" asChild>
-              <a href="mailto:eashajaved896@gmail.com">
-                <Mail className="h-4 w-4 mr-2" />
-                Send Email
-              </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-amber-600 text-amber-400 hover:bg-amber-600 hover:text-black bg-transparent"
-              asChild
-            >
-              <a href="https://www.linkedin.com/in/easha-javed-a27055263" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-4 w-4 mr-2" />
-                Connect on LinkedIn
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* GitHub */}
+      <Card className="w-[270px] h-[250px] bg-gray-900/50 border border-amber-900/30 hover:border-amber-600/50 transition-colors">
+        <CardContent className="p-8 text-center">
+          <Github className="h-12 w-12 text-amber-400 mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-amber-400 mb-2">GitHub</h3>
+          <Button variant="link" className="text-gray-300 hover:text-amber-400 p-0" asChild>
+            <a href="https://github.com/easha-javed" target="_blank" rel="noopener noreferrer">
+              View Profile
+            </a>
+          </Button>
+        </CardContent>
+      </Card>
+    </div>
+
+    {/* Buttons Row */}
+    <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center">
+      {/* Email Button */}
+      <Button
+        size="lg"
+        className="bg-amber-600 hover:bg-amber-700 text-black font-semibold px-6 py-3 w-fit"
+        asChild
+      >
+        <a href="mailto:eashajaved896@gmail.com" className="flex items-center">
+          <Mail className="h-4 w-4 mr-2" />
+          eashajaved896@gmail.com
+        </a>
+      </Button>
+
+      {/* LinkedIn Button */}
+      <Button
+        variant="outline"
+        size="lg"
+        className="border-amber-600 text-amber-400 hover:bg-amber-600 hover:text-black bg-transparent"
+        asChild
+      >
+        <a href="https://www.linkedin.com/in/easha-javed-a27055263" target="_blank" rel="noopener noreferrer">
+          <Linkedin className="h-4 w-4 mr-2" />
+          Connect on LinkedIn
+        </a>
+      </Button>
+
+      {/* GitHub Button */}
+      <Button
+        variant="outline"
+        size="lg"
+        className="border-amber-600 text-amber-400 hover:bg-amber-600 hover:text-black bg-transparent"
+        asChild
+      >
+        <a href="https://github.com/easha-javed" target="_blank" rel="noopener noreferrer">
+          <Github className="h-4 w-4 mr-2" />
+          Connect on GitHub
+        </a>
+      </Button>
+    </div>
+  </div>
+</section>
+
+
+
 
       {/* Footer */}
       <footer className="py-8 border-t border-amber-900/20 bg-black">
@@ -460,7 +503,7 @@ export default function Portfolio() {
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="text-gray-400 hover:text-amber-400" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/easha-javed" target="_blank" rel="noopener noreferrer">
                   <Github className="h-4 w-4" />
                 </a>
               </Button>
