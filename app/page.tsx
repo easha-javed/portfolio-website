@@ -393,14 +393,7 @@ export default function Portfolio() {
 
     {/* Grid of Cards */}
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 justify-center">
-      {/* Phone */}
-      <Card className="w-[270px] h-[250px] bg-gray-900/50 border border-amber-900/30 hover:border-amber-600/50 transition-colors">
-        <CardContent className="p-8 text-center">
-          <Phone className="h-12 w-12 text-amber-400 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-amber-400 mb-2">Phone</h3>
-          <p className="text-gray-300">03254217680</p>
-        </CardContent>
-      </Card>
+      
 
       {/* Email */}
       <Card className="w-[270px] h-[250px] bg-gray-900/50 border border-amber-900/30 hover:border-amber-600/50 transition-colors">
