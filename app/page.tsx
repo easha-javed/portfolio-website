@@ -88,106 +88,149 @@ export default function Portfolio() {
                 </Button>
             </div>
 
-            {/* Hero Section */}
-            <section id="home" className="min-h-screen flex items-center justify-center px-6">
-                <div className="container mx-auto text-center">
-                    <h1 className="text-7xl font-bold mb-6">
-                        Easha <span className="text-amber-400">Javed</span>
-                    </h1>
-                    <p className="text-2xl text-gray-300 mb-8">
-                        Computer Science Junior | Web & Game Development
-                    </p>
-                    <p className="text-lg text-gray-400 mb-10 max-w-xl mx-auto">
-                        Creating functional software and learning new technologies
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button
-                            size="lg"
-                            className="bg-amber-600 hover:bg-amber-700 text-black font-semibold"
-                            onClick={() => scrollToSection("projects")}
-                        >
-                            View Projects
-                        </Button>
-                        <Button
-                            variant="outline"
-                            size="lg"
-                            className="border-amber-600 text-amber-400 hover:bg-amber-600 hover:text-black bg-transparent"
-                            onClick={() => scrollToSection("connect")}
-                        >
-                            Let's Connect!
-                        </Button>
+{/* Hero Section */}
+<section id="home" className="min-h-screen flex items-center justify-center px-6">
+    <div className="container mx-auto text-center">
 
-                    </div>
-                    <div className="flex justify-center mt-16">
-                        <button
-                            onClick={() => scrollToSection("about")}
-                            className="flex flex-col items-center text-gray-400 hover:text-amber-400 transition-colors"
-                        >
-                            <span className="text-sm mb-2">Scroll down</span>
-                            <ChevronDown className="h-6 w-6 animate-bounce" />
-                        </button>
+        <h1 className="text-7xl font-bold mb-6">
+            Easha <span className="text-amber-400">Javed</span>
+        </h1>
+
+        <p className="text-2xl text-gray-300 mb-4">
+            Computer Science Student | AI & Full-Stack Developer
+        </p>
+
+        <p className="text-lg text-gray-400 mb-10 max-w-xl mx-auto">
+            Building full-stack applications and exploring machine learning, explainable AI, and real-world problem solving.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+                size="lg"
+                className="bg-amber-600 hover:bg-amber-700 text-black font-semibold"
+                onClick={() => scrollToSection("projects")}
+            >
+                View Projects
+            </Button>
+
+            <Button
+                variant="outline"
+                size="lg"
+                className="border-amber-600 text-amber-400 hover:bg-amber-600 hover:text-black bg-transparent"
+                onClick={() => scrollToSection("connect")}
+            >
+                Let's Connect!
+            </Button>
+        </div>
+
+        <div className="flex justify-center mt-16">
+            <button
+                onClick={() => scrollToSection("about")}
+                className="flex flex-col items-center text-gray-400 hover:text-amber-400 transition-colors"
+            >
+                <span className="text-sm mb-2">Scroll down</span>
+                <ChevronDown className="h-6 w-6 animate-bounce" />
+            </button>
+        </div>
+
+    </div>
+</section>
+
+{/* About Section */}
+<section id="about" className="py-20 px-6 bg-gray-900/50">
+    <div className="container mx-auto max-w-4xl">
+
+        <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 text-amber-400">
+            About Me
+        </h2>
+
+        <div className="text-center">
+
+            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                I'm a Computer Science student at FAST-NUCES, Lahore, with hands-on experience in building full-stack applications and system-level projects. I enjoy turning ideas into practical, working software with clean structure and reliable functionality.
+            </p>
+
+            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                My work ranges from role-based web systems and real-time platforms to applying machine learning concepts such as model evaluation, explainability (SHAP), and integrating LLMs for user-friendly outputs.
+            </p>
+
+            <p className="text-lg text-gray-300 mb-12 leading-relaxed">
+                I'm particularly interested in building systems that balance backend logic, user experience, and intelligent features, with a focus on writing efficient, maintainable, and scalable code.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8 mt-12">
+
+                {/* Technical Skills */}
+                <div>
+                    <h3 className="text-2xl font-semibold mb-6 text-amber-400">
+                        Technical Skills
+                    </h3>
+
+                    <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                        {[
+                            "Python",
+                            "C++",
+                            "JavaScript",
+                            "Machine Learning",
+                            "XGBoost",
+                            "scikit-learn",
+                            "SHAP (XAI)",
+                            "NLP (Basic)",
+                            "Flask",
+                            "React.js",
+                            "Node.js",
+                            "MongoDB",
+                            "SQL Server",
+                            "Data Structures",
+                            "OOP"
+                        ].map((skill) => (
+                            <Badge
+                                key={skill}
+                                variant="secondary"
+                                className="bg-amber-900/30 text-amber-200 border-amber-700"
+                            >
+                                {skill}
+                            </Badge>
+                        ))}
                     </div>
                 </div>
-            </section>
 
-            {/* About Section */}
-            <section id="about" className="py-20 px-6 bg-gray-900/50">
-                <div className="container mx-auto max-w-4xl">
-                    <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 text-amber-400">About Me</h2>
-                    <div className="text-center">
-                        <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                            I'm a Computer Science student at FAST-NUCES, Lahore. I work on web development and game development projects, building practical applications and solving problems with code.
-                        </p>
-                        <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                            I focus on learning new technologies, improving my programming skills, and applying them effectively. I enjoy designing clean, functional software and experimenting with systems at both high and low levels.
-                        </p>
-                        <p className="text-lg text-gray-300 mb-12 leading-relaxed">
-                            Outside academics, I like learning by doing and keeping my work straightforward and organized.
-                        </p>
+                {/* Courses */}
+                <div>
+                    <h3 className="text-2xl font-semibold mb-6 text-amber-400">
+                        Courses
+                    </h3>
 
-                        <div className="grid md:grid-cols-2 gap-8 mt-12">
-                            <div>
-                                <h3 className="text-2xl font-semibold mb-6 text-amber-400">Technical Skills</h3>
-                                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                                    {[
-                                        "C++",
-                                        "Python",
-                                        "React.js",
-                                        "Node.js",
-                                        "Assembly (IAPX 8088)",
-                                        "SFML",
-                                        "Object Oriented Programming",
-                                        "Data Structures",
-                                    ].map((skill) => (
-                                        <Badge key={skill} variant="secondary" className="bg-amber-900/30 text-amber-200 border-amber-700">
-                                            {skill}
-                                        </Badge>
-                                    ))}
-                                </div>
-                            </div>
-                            <div>
-                                <h3 className="text-2xl font-semibold mb-6 text-amber-400">Courses</h3>
-                                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                                    {[
-                                        "Design and Analysis of Algorithms",
-                                        "Data Structures",
-                                        "Software Testing",
-                                        "Database Systems",
-                                        "Theory of Automata",
-                                        "Operating Systems",
-                                        "Computer Networks",
-                                    ].map((interest) => (
-                                        <Badge key={interest} variant="outline" className="border-gray-600 text-gray-300">
-                                            {interest}
-                                        </Badge>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
+                    <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                        {[
+                            "Design & Analysis of Algorithms",
+                            "Data Structures",
+                            "Software Testing",
+                            "Database Systems",
+                            "Operating Systems",
+                            "Computer Networks",
+                            "Theory of Automata",
+                            "Software Engineering",
+                            "Artificial Intelligence",
+                            "Computer Architecture"
+                        ].map((course) => (
+                            <Badge
+                                key={course}
+                                variant="outline"
+                                className="border-gray-600 text-gray-300"
+                            >
+                                {course}
+                            </Badge>
+                        ))}
                     </div>
                 </div>
-            </section>
 
+            </div>
+
+        </div>
+
+    </div>
+</section>
             {/* Education Section */}
             <section id="education" className="py-20 px-6">
                 <div className="container mx-auto max-w-4xl">
@@ -199,7 +242,7 @@ export default function Portfolio() {
                                 institution: "FAST-NUCES",
                                 location: "Lahore, Pakistan",
                                 period: "2023 - 2027",
-                                details: "Semesters: 5/8 | CGPA: 3.32/4",
+                                details: "Semesters: 6/8 | CGPA: 3.32/4",
                                 type: "current",
                             },
                             {
@@ -208,14 +251,6 @@ export default function Portfolio() {
                                 location: "Lahore, Pakistan",
                                 period: "2021 - 2023",
                                 details: "Subjects: Mathematics, Physics, Chemistry | Score: 958/1100",
-                                type: "completed",
-                            },
-                            {
-                                degree: "Matriculation",
-                                institution: "Divisional Public School",
-                                location: "Lahore, Pakistan",
-                                period: "2019 - 2021",
-                                details: "Subjects: Biology, Chemistry, Physics, Mathematics | Score: 1098/1100",
                                 type: "completed",
                             },
                         ].map((edu, index) => (
@@ -256,6 +291,20 @@ export default function Portfolio() {
                     <h2 className="text-4xl lg:text-5xl font-bold text-center mb-16 text-amber-400">Projects</h2>
                     <div className="grid lg:grid-cols-2 gap-8">
                         {[
+                            {
+    title: "MediRisk – Cardiovascular Risk Predictor",
+    period: "Mar 2026 - Present",
+    technologies: ["Python", "XGBoost", "Flask", "SHAP", "GPT"],
+    description:
+        "Developed an end-to-end AI system for cardiovascular risk prediction combining machine learning, explainable AI, and natural language generation.",
+    features: [
+        "ML Pipeline: XGBoost model with preprocessing, feature engineering, and evaluation (F1, AUC-ROC)",
+        "Explainable AI: SHAP-based global and local feature attribution",
+        "NLP Integration: GPT-based natural language explanations for patient-friendly insights",
+        "Interactive System: Flask API with real-time prediction and Q&A interface",
+        "End-to-End Design: Combines ML + XAI + LLM into a single deployable pipeline",
+    ],
+},
                             {
                                 title: "Library Management System",
                                 period: "Mar 2025 - Apr 2025",
