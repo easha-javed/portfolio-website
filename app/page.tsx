@@ -110,6 +110,7 @@ type Project = {
   tech: string[];
   summary: string;
   bullets: { label: string; content: string }[];
+  repo?: string;
 };
 
 const PROJECTS: Project[] = [
@@ -118,6 +119,7 @@ const PROJECTS: Project[] = [
     kinds: ['Final Year Project', 'Research & Development'],
     dates: 'Aug 2026 - Present',
     tech: ['Python', 'HuggingFace Transformers', 'Groq API', 'OpenAI API', 'tiktoken'],
+    repo: 'https://github.com/fwaseemansari/trim-fyp',
     summary:
       'LLM applications pay in cost, latency, and context space for every token they process. TRIM is an intelligent token optimization framework, built with teammates Faiqa Waseem and Dania Athar under advisor Usama Hassan Alvi, that compresses prompts and manages multi-turn context adaptively without sacrificing output quality.',
     bullets: [
@@ -152,6 +154,7 @@ const PROJECTS: Project[] = [
     kinds: ['Research & Development'],
     dates: 'Jan 2026 - Jun 2026',
     tech: ['Python', 'XGBoost', 'SHAP', 'Flask', 'Gemini API'],
+    repo: 'https://github.com/easha-javed/MediRisk',
     summary:
       "An end-to-end AI system for cardiovascular risk prediction that combines machine learning, explainable AI, and natural language generation to turn a model's output into something a patient can actually understand.",
     bullets: [
@@ -182,6 +185,7 @@ const PROJECTS: Project[] = [
     name: 'RAG-Based AI Chatbot',
     dates: 'May 2026 - Jul 2026',
     tech: ['React', 'FastAPI', 'ChromaDB', 'Groq LLaMA'],
+    repo: 'https://github.com/ridafatimat/RAG-chatbot',
     summary:
       "A chatbot that answers questions grounded in a user's own uploaded documents, retrieving relevant passages before generating a response.",
     bullets: [
@@ -194,6 +198,7 @@ const PROJECTS: Project[] = [
     name: 'Nexus - Student Digital Assistant',
     dates: 'Oct 2025 - Nov 2025',
     tech: ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB'],
+    repo: 'https://github.com/easha-javed/Nexus',
     summary:
       'A role-based social and academic assistant platform for university students, enabling connections, society exploration, real-time messaging, and campus-wide updates.',
     bullets: [
@@ -208,6 +213,7 @@ const PROJECTS: Project[] = [
     name: 'Library Management System',
     dates: 'Mar 2025 - Apr 2025',
     tech: ['React', 'Node', 'Express', 'SQL'],
+    repo: 'https://github.com/easha-javed/Library-Management-System',
     summary:
       'A comprehensive, role-based library management system designed to streamline book borrowing, inventory tracking, and user management for both members and librarians.',
     bullets: [
@@ -223,6 +229,7 @@ const PROJECTS: Project[] = [
     name: 'Maze Runner',
     dates: 'Dec 2024',
     tech: ['Assembly (Intel 8088)'],
+    repo: 'https://github.com/easha-javed/Maze-Runner',
     summary:
       'An interactive 2D maze game built in low-level Assembly for the Intel IAPX 8088 architecture, showcasing hardware-near programming.',
     bullets: [
@@ -236,6 +243,7 @@ const PROJECTS: Project[] = [
     name: 'Chess Game',
     dates: 'May 2024',
     tech: ['C++', 'SFML', 'OOP'],
+    repo: 'https://github.com/easha-javed/Chess',
     summary:
       'A fully interactive 2D chess game built with C++ and the SFML graphics library, using object-oriented design throughout.',
     bullets: [
@@ -249,6 +257,7 @@ const PROJECTS: Project[] = [
     name: 'Bejeweled Blitz',
     dates: 'Nov 2023 - Dec 2023',
     tech: ['C++', 'SFML'],
+    repo: 'https://github.com/easha-javed/Bejeweled-Blitz',
     summary:
       'A clone of Bejeweled Blitz built with C++ and SFML, emphasizing real-time interaction and score-based progression.',
     bullets: [
@@ -683,12 +692,24 @@ function ProjectCard({ project }: { project: Project }) {
           </li>
         ))}
       </ul>
-      <div className="mt-5 flex flex-wrap gap-2">
-        {project.tech.map((t) => (
-          <span key={t} className="rounded-full border border-hair px-2.5 py-1 font-plex-mono text-xs text-ink-dim">
-            {t}
-          </span>
-        ))}
+      <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap gap-2">
+          {project.tech.map((t) => (
+            <span key={t} className="rounded-full border border-hair px-2.5 py-1 font-plex-mono text-xs text-ink-dim">
+              {t}
+            </span>
+          ))}
+        </div>
+        {project.repo && (
+          <a
+            href={project.repo}
+            target="_blank"
+            rel="noreferrer"
+            className="hover-accent font-plex-mono text-xs text-ink-dim transition-colors"
+          >
+            GitHub &rarr;
+          </a>
+        )}
       </div>
     </div>
   );
@@ -784,16 +805,6 @@ function Connect() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="mx-auto max-w-5xl border-t border-hair px-6 py-8">
-      <p className="font-plex-mono text-xs text-ink-dim">
-        (c) {new Date().getFullYear()} Easha Javed.
-      </p>
-    </footer>
-  );
-}
-
 /* ---------------------------------------------------------------------- */
 
 export default function Portfolio() {
@@ -810,7 +821,6 @@ export default function Portfolio() {
         <Skills />
         <Connect />
       </main>
-      <Footer />
     </>
   );
 }
